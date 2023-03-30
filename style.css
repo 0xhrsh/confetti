@@ -1,0 +1,45 @@
+:root {
+    --left-bg-color: rgba(242, 237, 237);
+    --left-button-hover-color: rgb(137, 24, 30);
+    --right-bg-color: rgb(99, 64, 136);
+    --right-button-hover-color: rgba(92, 92, 92, 0.3);
+    --hover-width: 75%;
+    --other-width: 25%;
+    --speed: 1000ms;
+}
+
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica New", sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+.fa {
+    font-size: 20px;
+    color: var(--left-bg-color);
+    padding-left: 15px;
+}
+
+.confetti {
+    /* max-width: 640px; */
+    width: 100%;
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    /* border: 1px solid #ddd; */
+    user-select: none;
+    z-index: 0;
+}
+
+
+.bottom-right {
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+}
