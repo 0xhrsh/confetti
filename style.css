@@ -42,4 +42,5 @@ body {
     position: absolute;
     bottom: 2%;
     right: 2%;
+    z-index: 1;
 }
