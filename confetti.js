@@ -8,9 +8,9 @@ cy = ctx.canvas.height / 2;
 
 let confetti = [];
 const confettiCount = 200;
-const gravity = 0.7;
+const gravity = 0.9;
 const terminalVelocity = 4;
-const drag = 0.075;
+const drag = 0.07;
 const colors = [
     { front: 'red', back: 'darkred' },
     { front: 'green', back: 'darkgreen' },
@@ -39,7 +39,6 @@ function wait(time) {
 }
 
 initConfetti = () => {
-
     for (let i = 0; i < confettiCount; i++) {
         confetti.push({
             color: colors[Math.floor(randomRange(0, colors.length))],
@@ -105,19 +104,15 @@ render = () => {
         // Reset transform matrix
         ctx.setTransform(1, 0, 0, 1, 0, 0);
     });
-
+    if (confetti.length <= 100) initConfetti();
     window.requestAnimationFrame(render);
 };
 
 //---------Execution--------
 
 fireConfetti = () => {
-    for (let i = 0; i < 100; i++) {
-        wait(i * 1500).then(() => {
-            initConfetti();
-            render();
-        });
-    }
+    initConfetti();
+    render();
 };
 
 
