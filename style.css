@@ -22,7 +22,7 @@ body {
 
 .fa {
     font-size: 20px;
-    color: var(--left-bg-color);
+    color: var(--right-bg-color);
     padding-left: 15px;
 }
 
