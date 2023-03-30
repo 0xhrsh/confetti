@@ -104,7 +104,7 @@ render = () => {
         // Reset transform matrix
         ctx.setTransform(1, 0, 0, 1, 0, 0);
     });
-    if (confetti.length <= 100) initConfetti();
+    initConfetti();
     window.requestAnimationFrame(render);
 };
 
